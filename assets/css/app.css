@@ -5,7 +5,7 @@ html {
 
 #sidebar {
     width: 250px;
-    background-color: #c3d7df;
+    background-color: #2a3846;
     height: 100vh;
     overflow-x: hidden;
     visibility: visible;
@@ -17,6 +17,7 @@ html {
     background-color: rgb(75, 131, 133);
     text-align: center;
     color: white;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 #sidebar-title h4 {
@@ -24,25 +25,26 @@ html {
     margin: 0px;
 }
 
-#sidebar-content {
-    padding: 5px;
-}
-
 #sidebar-btn {
     line-height: 50px;
-    margin: 0px 15px;
+    padding: 0px 15px;
     cursor: pointer;
 }
 
+#sidebar-btn:hover {
+    background-color: rgb(75, 131, 133);
+}
+
 .mainbar-marginLeft {
-    padding-left: 0px !important;
+    margin-left: 0px !important;
+    width: 100% !important;
 }
 
 #mainbar {
-    transition: padding-left .5s;
-    width: 100%;
+    transition: width .5s, margin-left .5s;
+    width: calc(100% - 250px);
     height: 100vh;
-    padding-left: 250px;
+    margin-left: 250px;
     position: absolute;
     top: 0px;
 }
@@ -55,7 +57,125 @@ html {
 }
 
 #page-content {
-    height: 100%;
+    height: calc(100% - 50px);
     width: 100%;
-    background-color: white;
+    background-color: #d3e4ea;
+}
+
+#notifications {
+    float: right;
+    
+}
+
+#notificationIconRow {
+    float: right;
+}
+
+#notificationsDropdowns {
+    margin-top: 50px;
+    width: 200px;
+    background-color: #b8dad5;
+    padding: 5px;
+    font-size: small;
+    border-bottom-left-radius: 5px;
+    visibility: hidden;
+}
+
+.notificationsVisible {
+    visibility: visible !important;
+}
+
+.notificationIcon {
+    line-height: 50px;
+    padding: 0px 16px;
+    cursor: pointer;
+}
+
+.notificationIcon:hover {
+    background-color: rgb(75, 131, 133);
+}
+
+.tab {
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tab:hover .tabHighlight {
+    height: 100%;
+    width: 3px;
+    background-color: cadetblue;
+    float: left;
+}
+
+.tabLabel {
+    width: 100%;
+    line-height: 40px;
+    color: white;
+    padding-left: 15px;
+}
+
+.tab:hover .tabLabel {
+    width: calc(100% - 3px);
+    height: 100%;
+    background-color: #1b252f;
+    float: left;
+}
+
+.tabIcon {
+    padding-right: 15px;
+}
+
+.tabSelected .tabHighlight {
+    height: 100%;
+    width: 3px;
+    background-color: cadetblue;
+    float: left;
+}
+
+.tabSelected .tabLabel {
+    width: calc(100% - 3px);
+    height: 100%;
+    background-color: #1b252f;
+    float: left;
+}
+
+.tabContent {
+    visibility: hidden;
+    height: calc(100% - 50px);
+}
+
+.contentSelected {
+    visibility: visible;
+    top: 50px;
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+}
+
+.submenu {
+    background-color: #36495d;
+    color: #cbd6e0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submenuItem {
+    padding: 2px 15px 2px 25px;
+}
+
+.submenuItem:hover {
+    color: white;
+    background-color: #42566b;
+}
+
+.submenuTabIcon {
+    float: right;
+    line-height: 40px;
+    padding-right: 15px;
+}
+
+.submenuItemSelected {
+    color: white;
+    background-color: #42566b;
 }
