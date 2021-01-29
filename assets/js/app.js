@@ -38,6 +38,7 @@ $( window ).on( "load", function() {
         }
     });
 
+    // Alternate between up and down arrows for Tabs with submenus
     $(".submenuTab").click(function(el) {
         $("#" + $(el)[0].currentTarget.id + " .submenuTabIcon").toggleClass("fa-angle-down fa-angle-up");
     });

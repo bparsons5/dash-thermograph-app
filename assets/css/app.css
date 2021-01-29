@@ -1,14 +1,16 @@
 html {
-    height: 100vh;
-    overflow: hidden;
+    background-color: #2a3846;
 }
 
+/* SIDEBAR */
 #sidebar {
+    min-height: 100vh;
     width: 250px;
     background-color: #2a3846;
-    height: 100vh;
     overflow-x: hidden;
     visibility: visible;
+    float: left;
+    z-index: -1;
 }
 
 #sidebar-title {
@@ -31,6 +33,7 @@ html {
     cursor: pointer;
 }
 
+/* MAINBAR */
 #sidebar-btn:hover {
     background-color: rgb(75, 131, 133);
 }
@@ -41,14 +44,15 @@ html {
 }
 
 #mainbar {
+    min-height: 100vh;
     transition: width .5s, margin-left .5s;
     width: calc(100% - 250px);
-    height: 100vh;
     margin-left: 250px;
-    position: absolute;
     top: 0px;
+    position: absolute;
 }
 
+/* NAVBAR */
 #navbar {
     height: 50px;
     width: 100%;
@@ -56,15 +60,21 @@ html {
     color: white;
 }
 
+
+/* Page or Dashboard Content */
 #page-content {
-    height: calc(100% - 50px);
     width: 100%;
     background-color: #d3e4ea;
+    min-height: calc(100vh - 50px);
+    z-index: -1;
 }
 
+/* NOTIFICATIONS */
 #notifications {
-    float: right;
-    
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
 
 #notificationIconRow {
@@ -95,6 +105,7 @@ html {
     background-color: rgb(75, 131, 133);
 }
 
+/* TAB/Submenu related css. Sidebar and Page-content related */
 .tab {
     height: 40px;
     width: 100%;
@@ -141,16 +152,13 @@ html {
 }
 
 .tabContent {
-    visibility: hidden;
-    height: calc(100% - 50px);
+    display: none;
+    width: 100%;
+    padding: 10px;
 }
 
 .contentSelected {
-    visibility: visible;
-    top: 50px;
-    position: absolute;
-    width: 100%;
-    padding: 5px;
+    display: block;
 }
 
 .submenu {
@@ -178,4 +186,50 @@ html {
 .submenuItemSelected {
     color: white;
     background-color: #42566b;
+}
+
+.row {
+    width: 100%;
+    margin: 0px;
+}
+
+.card-header {
+    background-color: cadetblue;
+}
+
+.card-tabs .nav-item {
+    cursor: default;
+}
+
+.documentation {
+    width: 900px;
+}
+
+#viewData-table button {
+    background-color: rgba(0,0,0,0);
+}
+
+#viewData-table .dash-fixed-content {
+    width: 100%;
+}
+
+#thermograph-display {
+    padding: 5px;
+    background-color: #bdd7d8;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+#controls {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #445465;
+}
+
+#metric_thermographs {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(75, 131, 133);
 }
